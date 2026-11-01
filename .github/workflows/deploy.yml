@@ -3,6 +3,9 @@ name: Deploy Vite React app to GitHub Pages
 on:
   push:
     branches: [master, main]
+  workflow_run:
+    workflows: ['pages build and deployment']
+    types: [completed]
   workflow_dispatch:
 
 permissions:
